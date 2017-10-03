@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @costume.name %>
+</p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @costume.item %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @costume.url %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @costume.comment %>
+</p>
+
+<%= link_to 'Edit', edit_costume_path(@costume) %> |
+<%= link_to 'Back', costumes_path %>

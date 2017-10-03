@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Costumes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Item</th>
+      <th>Url</th>
+      <th>Comment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @costumes.each do |costume| %>
+      <tr>
+        <td><%= costume.name %></td>
+        <td><%= costume.item %></td>
+        <td><%= link_to 'ここからURLにとべます', costume.url %></td>
+        <td><%= costume.comment %></td>
+        <td><%= link_to 'Show', costume %></td>
+        <td><%= link_to 'Edit', edit_costume_path(costume) %></td>
+        <td><%= link_to 'Destroy', costume, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Costume', new_costume_path %>
